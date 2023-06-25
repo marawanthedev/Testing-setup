@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --dir src",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "next": "13.4.7",
@@ -34,5 +36,9 @@
     "prettier": "2.3.2",
     "ts-jest": "27.0.3",
     "typescript": "^5.0.4"
+  },
+  "lint-staged": {
+    "*.(tsx|ts)": "eslint --cache --fix",
+    "*": "prettier --write --ignore-unknown"
   }
 }
