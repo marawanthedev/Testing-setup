@@ -41,5 +41,8 @@
   "lint-staged": {
     "*.(tsx|ts)": "eslint --cache --fix",
     "*": "prettier --write --ignore-unknown"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
   }
 }
